@@ -1,19 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { MascotaService } from '../../services/mascota.service';
-import { Mascota } from '../../models/mascota.model';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-listar-mascota',
-  templateUrl: './listar.component.html'
+  selector: 'app-listar',
+  standalone: true,
+  imports: [],
+  templateUrl: './listar.component.html',
+  styleUrl: './listar.component.css'
 })
-export class ListarMascotaComponent implements OnInit {
-  mascotas: Mascota[] = [];
+export class ListarComponent {
 
-  constructor(private mascotaService: MascotaService) {}
-
-  ngOnInit(): void {
-    this.mascotaService.getMascotas().subscribe(data => {
-      this.mascotas = data;
-    });
-  }
 }

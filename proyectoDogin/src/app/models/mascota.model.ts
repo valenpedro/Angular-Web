@@ -1,4 +1,3 @@
-// src/app/models/mascota.model.ts
 import { Propietario } from './propietario.model';
 
 export interface Mascota {
