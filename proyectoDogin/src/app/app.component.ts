@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-header', //Nombre del componente que esta el html
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.css'
 })
+
 export class AppComponent {
+  //modelo y controlador
   title = 'proyectoDogin';
 }
