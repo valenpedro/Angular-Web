@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MascotaService } from "../../../services/mascota.service";
-import { Mascota } from "../../../models/mascota.model";
+import { MascotaService } from '../../../services/mascota.service';
+import { Mascota } from '../../../models/mascota.model';
 
 @Component({
   selector: 'app-editar',

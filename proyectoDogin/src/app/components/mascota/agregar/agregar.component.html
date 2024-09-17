@@ -2,21 +2,21 @@
 <form (ngSubmit)="agregarMascota()">
   <label>Nombre:</label>
   <input [(ngModel)]="mascota.nombre" name="nombre" required>
-  
+
   <label>Raza:</label>
   <input [(ngModel)]="mascota.raza" name="raza" required>
-  
+
   <label>Edad:</label>
   <input type="number" [(ngModel)]="mascota.edad" name="edad" required>
-  
+
   <label>Peso:</label>
   <input type="number" [(ngModel)]="mascota.peso" name="peso" required>
-  
+
   <label>Enfermedad:</label>
   <input [(ngModel)]="mascota.enfermedad" name="enfermedad">
-  
+
   <label>Estado:</label>
   <input [(ngModel)]="mascota.estado" name="estado">
-  
+
   <button type="submit">Agregar Mascota</button>
 </form>

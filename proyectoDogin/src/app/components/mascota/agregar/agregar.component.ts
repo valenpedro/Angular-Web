@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { MascotaService } from "../../../services/mascota.service";
-import { Mascota } from "../../../models/mascota.model";
+import { MascotaService } from '../../../services/mascota.service';
+import { Mascota } from '../../../models/mascota.model';
 
 @Component({
   selector: 'app-agregar',
@@ -16,11 +16,12 @@ export class AgregarComponent {
     edad: 0,
     peso: 0,
     enfermedad: '',
+    fotoUrl: '',
     estado: '',
     propietario: { id: 0, cedula: '', nombre: '', correo: '', celular: '', contrasena: '' }
   };
 
-  constructor(private mascotaService: MascotaService, private router: Router) {}
+  constructor(private mascotaService: MascotaService, private router: Router) { }
 
   agregarMascota(): void {
     this.mascotaService.addMascota(this.mascota);
