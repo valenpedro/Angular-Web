@@ -1,5 +1,5 @@
-// src/app/components/mascota/agregar/agregar.component.ts
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { MascotaService } from "../../../services/mascota.service";
 import { Mascota } from "../../../models/mascota.model";
 
@@ -20,9 +20,10 @@ export class AgregarComponent {
     propietario: { id: 0, cedula: '', nombre: '', correo: '', celular: '', contrasena: '' }
   };
 
-  constructor(private mascotaService: MascotaService) {}
+  constructor(private mascotaService: MascotaService, private router: Router) {}
 
   agregarMascota(): void {
     this.mascotaService.addMascota(this.mascota);
+    this.router.navigate(['/mascotas']);  // Navegar de nuevo al listado
   }
 }

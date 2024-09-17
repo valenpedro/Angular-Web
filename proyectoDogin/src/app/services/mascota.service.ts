@@ -1,4 +1,3 @@
-// src/app/services/mascota.service.ts
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Mascota } from '../models/mascota.model';
@@ -33,20 +32,24 @@ export class MascotaService {
 
   constructor() { }
 
+  // Obtener todas las mascotas
   getMascotas(): Observable<Mascota[]> {
     return of(this.mascotas);  // Retorna la base de datos quemada
   }
 
+  // Obtener una mascota por id
   getMascota(id: number): Observable<Mascota> {
     const mascota = this.mascotas.find(m => m.id === id);
     return of(mascota!);
   }
 
+  // Agregar una mascota
   addMascota(mascota: Mascota): void {
     mascota.id = this.mascotas.length + 1;
     this.mascotas.push(mascota);
   }
 
+  // Actualizar una mascota
   updateMascota(mascota: Mascota): void {
     const index = this.mascotas.findIndex(m => m.id === mascota.id);
     if (index > -1) {
@@ -54,6 +57,7 @@ export class MascotaService {
     }
   }
 
+  // Eliminar una mascota
   deleteMascota(id: number): void {
     this.mascotas = this.mascotas.filter(m => m.id !== id);
   }

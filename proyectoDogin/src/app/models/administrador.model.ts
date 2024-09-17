@@ -1,9 +1,7 @@
-export interface Veterinario {
+export interface Administrador {
     id: number;
     cedula: string;
     nombre: string;
-    especialidad: string;
-    numAtenciones: number;
     correo: string;
     contrasena: string;
   }

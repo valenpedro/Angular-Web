@@ -3,5 +3,6 @@
   <li *ngFor="let mascota of mascotas">
     {{ mascota.nombre }} - {{ mascota.raza }} - {{ mascota.propietario.nombre }}
     <button (click)="deleteMascota(mascota.id)">Eliminar</button>
+    <a [routerLink]="['/mascotas/editar', mascota.id]">Editar</a>
   </li>
 </ul>
